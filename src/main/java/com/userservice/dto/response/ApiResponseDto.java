@@ -1,4 +1,4 @@
-package com.userservice.dto;
+package com.userservice.dto.response;
 
 
 import lombok.AllArgsConstructor;
@@ -10,7 +10,10 @@ import lombok.Setter;
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
+public class ApiResponseDto<T>{
 
-public class RegisterResponseDto {
-    private String name;
+    private boolean success;
+    private String message;
+    private T data;
+
 }
